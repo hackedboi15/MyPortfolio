@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root { height: 100%; }
+
+
+.app-bg {
+  min-height: 100vh;
+  background:
+    radial-gradient(900px 420px at 20% 10%, rgba(34,211,238,0.12), transparent 60%),
+    radial-gradient(900px 480px at 80% 20%, rgba(16,185,129,0.12), transparent 60%),
+    radial-gradient(700px 400px at 50% 80%, rgba(139,92,246,0.10), transparent 60%),
+    linear-gradient(180deg, #0a0f18 0%, #0b1220 40%, #0d111a 100%);
+}
+
+.bg-flare {
+  position: absolute;
+  inset: -20%;
+  background: radial-gradient(60% 60% at 20% 30%, rgba(34,197,94,0.18), transparent 60%),
+              radial-gradient(50% 50% at 80% 20%, rgba(59,130,246,0.18), transparent 60%),
+              radial-gradient(40% 40% at 60% 80%, rgba(236,72,153,0.18), transparent 60%);
+  filter: blur(30px);
+  animation: floaty 16s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes floaty {
+  from { transform: translate3d(0, 0, 0) scale(1); }
+  to   { transform: translate3d(0, -10px, 0) scale(1.02); }
+}
+
+.perspective-1000 { perspective: 1000px; }
+
+.card-rainbow {
+  position: relative;
+  border-radius: 16px;
+  background: linear-gradient(#0b1220, #0b1220) padding-box,
+              linear-gradient(135deg, #22d3ee 0%, #34d399 25%, #f59e0b 50%, #f43f5e 75%, #8b5cf6 100%) border-box;
+  border: 1px solid transparent;
+}
+
+.card-rainbow:hover {
+  box-shadow: 0 12px 40px rgba(34,211,238,0.2), 0 8px 24px rgba(139,92,246,0.18);
+  transform: translateY(-2px);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+
+.text-gradient-cyan {
+  background: linear-gradient(90deg, #22d3ee, #60a5fa 40%, #a78bfa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-gradient-emerald {
+  background: linear-gradient(90deg, #34d399, #10b981);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.btn-glow {
+  background: linear-gradient(90deg, #22d3ee, #34d399);
+  color: #0a0f18;
+  font-weight: 600;
+  box-shadow: 0 0 0 rgba(34,197,94,0), 0 0 0 rgba(59,130,246,0);
+}
+.btn-glow:hover {
+  box-shadow: 0 8px 30px rgba(34,197,94,0.25), 0 4px 14px rgba(59,130,246,0.25);
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+.hr-gradient {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(99,102,241,0.4), transparent);
+}
+
+
+.surface {
+  background: rgba(7, 20, 32, 0.6);
+  border: 1px solid rgba(56, 71, 95, 0.6);
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+}
+
+
+.card-theme-cyan {
+  position: relative;
+  border-radius: 16px;
+  background: linear-gradient(#0b1220, #0b1220) padding-box,
+              linear-gradient(135deg, rgba(34,211,238,0.6), rgba(6,182,212,0.6)) border-box;
+  border: 1px solid transparent;
+}
+.card-theme-emerald {
+  position: relative;
+  border-radius: 16px;
+  background: linear-gradient(#0b1220, #0b1220) padding-box,
+              linear-gradient(135deg, rgba(16,185,129,0.6), rgba(34,197,94,0.6)) border-box;
+  border: 1px solid transparent;
+}
+.card-theme-fuchsia {
+  position: relative;
+  border-radius: 16px;
+  background: linear-gradient(#0b1220, #0b1220) padding-box,
+              linear-gradient(135deg, rgba(236,72,153,0.6), rgba(219,39,119,0.6)) border-box;
+  border: 1px solid transparent;
+}
+.card-theme-amber {
+  position: relative;
+  border-radius: 16px;
+  background: linear-gradient(#0b1220, #0b1220) padding-box,
+              linear-gradient(135deg, rgba(245,158,11,0.6), rgba(217,119,6,0.6)) border-box;
+  border: 1px solid transparent;
+}
+.card-theme-purple {
+  position: relative;
+  border-radius: 16px;
+  background: linear-gradient(#0b1220, #0b1220) padding-box,
+              linear-gradient(135deg, rgba(139,92,246,0.6), rgba(124,58,237,0.6)) border-box;
+  border: 1px solid transparent;
+}
+
+.card-theme-cyan:hover,
+.card-theme-emerald:hover,
+.card-theme-fuchsia:hover,
+.card-theme-amber:hover,
+.card-theme-purple:hover {
+  transform: translateY(-3px);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.card-theme-cyan:hover { box-shadow: 0 16px 48px rgba(34,211,238,0.25); }
+.card-theme-emerald:hover { box-shadow: 0 16px 48px rgba(16,185,129,0.25); }
+.card-theme-fuchsia:hover { box-shadow: 0 16px 48px rgba(236,72,153,0.25); }
+.card-theme-amber:hover { box-shadow: 0 16px 48px rgba(245,158,11,0.25); }
+.card-theme-purple:hover { box-shadow: 0 16px 48px rgba(139,92,246,0.25); }
+
+
+.badge-colorful {
+  background: linear-gradient(135deg, rgba(34,211,238,0.12), rgba(139,92,246,0.12));
+  border: 1px solid rgba(56, 71, 95, 0.6);
+  color: #e5e7eb;
+  border-radius: 999px;
+  font-size: 12px;
+  padding: 4px 8px;
+}
